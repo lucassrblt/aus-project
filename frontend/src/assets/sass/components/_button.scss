@@ -1,0 +1,58 @@
+@use "../utils" as u;
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  button{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-green);
+    gap: 0.6rem;
+    color: var(--primary-white);
+    svg{
+      width: 1.8rem;
+    }
+
+    span{
+      @include u.font("Poppins", 500, 1.2rem, var(--primary-white));
+    }
+
+    &:hover{
+      background-color: var(--primary-green-hover);
+    }
+  }
+
+  .outline {
+    background-color: transparent;
+    border: 1.5px solid var(--primary-red);
+    color: var(--primary-green);
+    transition : all 0.2s ease;
+
+    &:hover{
+      background-color: var(--primary-red);
+      color: var(--primary-white);
+      span{
+        color: var(--primary-white);
+      }
+    }
+    span{
+      @include u.font("Poppins", 600, 1.2rem, var(--primary-green));
+    }
+  }
+
+  .lg{
+    padding: 1rem 1.6rem;
+
+    span{
+      @include u.font("Poppins", 500, 1.4rem, var(--primary-white));
+    }
+  }
+}

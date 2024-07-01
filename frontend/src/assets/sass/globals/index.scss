@@ -1,0 +1,23 @@
+@forward "colors";
+@forward "font";
+@forward "../dashboard/dasboard";
+
+@font-face {
+  font-family: "Geomanist Light";
+  src: url("../../font/Geomanist-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "GeomanistMedium";
+  src: url("../../font/Geomanist-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Geomanist Regular";
+  src: url("../../font/Geomanist-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Geomanist Bold";
+  src: url("../../font/Geomanist-Bold.ttf") format("ttf");
+}

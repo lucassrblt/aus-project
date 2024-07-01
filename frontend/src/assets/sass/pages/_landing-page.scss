@@ -1,0 +1,264 @@
+@use "../utils" as u;
+
+.landing-page-section {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  padding-bottom: 8rem;
+  gap: 8rem;
+  background-image: radial-gradient(#eeeeee 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 16rem;
+
+
+    .presentation {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10rem;
+      gap: 2rem;
+
+      .svg-message {
+        position: absolute;
+        z-index: 100;
+        transform: translateY(300%) translateX(330%);
+        opacity: 0;
+        animation: cursor 5s ease-in-out 1500ms;
+
+        .svg {
+          position: absolute;
+          height: 4rem;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .message {
+          transform: translateX(30%) translateY(65%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1.4rem 1.8rem;
+          border-radius: 0.6rem 4rem 4rem 4rem;
+          background-color: var(--primary-black);
+
+          p {
+            @include u.font("Nunito Sans", 700, 1.6rem, var(--primary-white))
+          }
+        }
+      }
+
+
+      .btn-lottie {
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+
+        .lottie {
+          position: absolute;
+          height: 120px;
+          transform: translateX(-100%) translateY(5%);
+        }
+      }
+    }
+
+    .text-section {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .title {
+        display: flex;
+        gap: 1.5rem;
+        position: relative;
+        max-width: 70%;
+        text-align: center;
+
+
+        h1 {
+          @include u.font("Nunito Sans", 800, 4.4rem, var(--primary-black));
+        }
+
+        div {
+          text-align: center;
+          position: relative;
+          width: fit-content;
+          height: fit-content;
+
+          .circle-lottie {
+            width: 300px;
+          transform : translateY(-82%) translateX(-12%);
+          position:absolute;
+          }
+
+          span {
+            @include u.font("Nunito Sans", 800, 4.4rem, var(--primary-green));
+
+          }
+        }
+
+
+        span {
+          color: var(--primary-green);
+        }
+      }
+
+      .paragraph {
+        max-width: 60%;
+        text-align: center;
+
+        p {
+          @include u.font("Nunito Sans", 500, 1.2rem, var(--secondary-black));
+        }
+      }
+    }
+
+    .jobs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      .jobs {
+        display: flex;
+        gap: 2.4rem;
+      }
+
+      .jobs:first-child {
+        transform: translateX(-120%);
+      }
+
+      .jobs:last-child {
+        transform: translateX(-20%);
+
+      }
+    }
+  }
+
+  .get-hired-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+
+    .text-section {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+
+      .title {
+        h1 {
+          @include u.font("Nunito Sans", 700, 2.8rem, var(--primary-black))
+        }
+
+        span {
+          color: var(--primary-green);
+        }
+      }
+
+      .paragraph {
+        p {
+          @include u.font("Nunito Sans", 500, 1.2rem, var(--secondary-black));
+        }
+      }
+    }
+
+    .get-hired-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.6rem;
+
+      .hired-card-component:nth-child(1), .hired-card-component:nth-child(3) {
+        transform: translateY(10%);
+        animation: 15s ease reverse infinite movedown;
+      }
+
+      .hired-card-component:nth-child(2), .hired-card-component:nth-child(4) {
+        transform: translateY(-10%);
+        animation: 15s ease reverse infinite moveup;
+      }
+    }
+  }
+}
+
+@keyframes movedown {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+
+@keyframes moveup {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes cursor {
+  0% {
+    transform: translateY(260%) translateX(330%);
+    opacity: 0.5;
+  }
+  10% {
+    transform: translateY(260%) translateX(230%);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(170%) translateX(80%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(170%) translateX(80%);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(170%) translateX(80%);
+    opacity: 1;
+  }
+  70% {
+    scale: 1.3;
+  }
+  80% {
+    scale: 1;
+  }
+  90% {
+    transform: translateY(-380%) translateX(-1040%);
+  }
+  100% {
+    transform: translateY(-380%) translateX(-640%);
+    opacity: 0;
+  }
+}
+

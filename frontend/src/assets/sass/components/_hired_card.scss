@@ -1,0 +1,50 @@
+@use "../utils" as u;
+
+.hired-card-component {
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem 2.4rem 4rem;
+  background-color: var(--primary-white);
+  border: 1px solid var(--secondary-grey-grey);
+  box-shadow: 0 -5px 10px var(--secondary-grey);
+  border-radius: 1rem;
+  gap: 1rem;
+  max-width: 20%;
+
+  .icon {
+
+    width: fit-content;
+    height: fit-content;
+
+    .icon-container {
+      height: 4rem;
+      width: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      svg {
+        width: 2.4rem;
+      }
+    }
+  }
+
+  .title-paragraph{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    .title{
+      h1{
+        @include u.font("Nunito Sans", 700, 1.8rem, var(--primary-black))
+      }
+    }
+
+    .paragraph{
+      p{
+        @include u.font("Nunito Sans", 400, 1.2rem, var(--secondary-black))
+      }
+    }
+  }
+
+}

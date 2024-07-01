@@ -1,0 +1,53 @@
+.Section_selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  min-height: 100vh;
+  margin-top: 20px;
+}
+
+.Card {
+  display: flex;
+  border: 1px solid rgba(106, 106, 106, 0.355);
+  width: 60vw;
+  height: 170px;
+  border-radius: 10px;
+  font-size: 13px;
+  padding: 3px;
+  background-color: white;
+  &_section_company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+  &_section_details_first {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    p:nth-child(1) {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  &_section_details_second {
+    display: flex;
+    gap: 20px;
+    color: rgb(141, 141, 141);
+    li {
+      list-style-type: none;
+    }
+  }
+  &_icon_container {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+}
+
+.company_name {
+  text-align: center;
+}
