@@ -1,5 +1,4 @@
 import express, { json } from "express";
-import { auth } from "express-oauth2-jwt-bearer";
 import cors from "cors";
 import { getFirstOffres, getOffreDashboard, getTopMetier } from "./database";
 
@@ -7,15 +6,15 @@ const port = 3000;
 const app = express();
 const router = require('./routes')
 
-const jwtCheck = auth({
-  audience: "api.rouge.aus.floless.fr",
-  issuerBaseURL: "https://rouge-aus.eu.auth0.com/",
-  tokenSigningAlg: "RS256",
-});
+// const jwtCheck = auth({
+//   audience: "api.rouge.aus.floless.fr",
+//   issuerBaseURL: "https://rouge-aus.eu.auth0.com/",
+//   tokenSigningAlg: "RS256",
+// });
 
 app.use(cors());
 // enforce that all incoming requests are authenticated
-app.use(jwtCheck);
+// app.use(jwtCheck);
 // parse body to json
 app.use(json())
 app.use('/', router)
