@@ -20,5 +20,5 @@ app.use(json())
 app.use('/', router)
 
 app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+  console.log(`Server started`);
 });

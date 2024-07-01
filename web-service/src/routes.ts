@@ -25,6 +25,10 @@ try {
 }
 });
 
+router.get('/helloworld', function (req, res) {
+   res.send('Hello World')
+})
+
 router.post("/v1/updateProfile", async function (req, res) {
     try {
         const { email, name, firstname, phoneNumber, country, industry, bio, linkedin, website } = req.body;
